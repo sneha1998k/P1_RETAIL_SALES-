@@ -5,16 +5,15 @@ These help ensure your dataset is accurate, complete, and consistent:
 
 ### Missing & Invalid Values
 - Which rows have missing values in critical columns like `age`, `quantity`, `price_per_unit`, or `total_sale`?
-///
-select * from retail_sales
+`select * from retail_sales
 where age is null
 	or
 	quantity is null
 	or
 	price_per_unit is null
 	or
-	total_sale is null;
-///
+	total_sale is null;`
+
 
 - Are there any rows where `quantity * price_per_unit ≠ total_sale`? If so, how many?
 select quantity*price_per_unit != total_sale
