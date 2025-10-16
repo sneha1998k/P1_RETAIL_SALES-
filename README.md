@@ -5,6 +5,8 @@ These help ensure your dataset is accurate, complete, and consistent:
 
 ### Missing & Invalid Values
 - Which rows have missing values in critical columns like `age`, `quantity`, `price_per_unit`, or `total_sale`?
+
+
 `select * from retail_sales
 where age is null
 	or
